@@ -1,5 +1,5 @@
 {
-  "name": "MyShop",
+  "name": "myshop",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "react": "16.3.1",
-    "react-native": "0.55.4"
+    "react-native": "0.55.4",
+    "react-navigation": "^2.17.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
@@ -18,5 +19,17 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThanhLoc47/ShopOnlineReactNative.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThanhLoc47/ShopOnlineReactNative/issues"
+  },
+  "homepage": "https://github.com/ThanhLoc47/ShopOnlineReactNative#readme",
+  "description": ""
 }

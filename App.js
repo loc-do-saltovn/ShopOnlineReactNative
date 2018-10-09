@@ -1,39 +1,35 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import Authentication from './src/components/Authentication/Authentication'
+import ChangeInfo from './src/components/ChangeInfo/ChangeInfo'
+import Main from './src/components/Main/Main'
+import OrderHistory from './src/components/OrderHistory/OrderHistory'
+
+import {createStackNavigator} from 'react-navigation'
+
+const AppStackNavigator = createStackNavigator({
+  Authentication: {screen: Authentication},
+  ChangeInfo: {screen: ChangeInfo},
+  Main: {screen: Main},
+  OrderHistory: {screen: OrderHistory},
+}, {
+  // cấu hình mặc định cho tất cả các màn hình 
+  headerMode: 'none',
+  initialRouteName: 'Main'
+}
+)
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+      <AppStackNavigator ref={nav => {this.navigator = nav;}} /> // default page đầu tiên là page Main
     );
   }
 }
@@ -56,3 +52,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+
