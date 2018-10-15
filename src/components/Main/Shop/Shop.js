@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Dimensions,TouchableOpacity,  } from 'react-native';
+import { View, StyleSheet, Dimensions, Image } from 'react-native';
 
 import { YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
@@ -12,7 +12,16 @@ import Search from './Search/Search'
 import Cart from './Cart/Cart'
 import Header from './Header'
 
-const {height} = Dimensions.get('window')
+import homeIcon from '../../../media/appIcon/home0.png'
+import homeIconSelected from '../../../media/appIcon/home.png'
+import cartIcon from '../../../media/appIcon/cart0.png'
+import cartIconSelected from '../../../media/appIcon/cart.png'
+import contactIcon from '../../../media/appIcon/contact0.png'
+import contactIconSelected from '../../../media/appIcon/contact.png'
+import searchIcon from '../../../media/appIcon/search0.png'
+import searchIconSelected from '../../../media/appIcon/search.png'
+
+const { height } = Dimensions.get('window')
 
 export default class Shop extends Component<Props> {
     constructor(props) {
@@ -26,57 +35,71 @@ export default class Shop extends Component<Props> {
         open();
     }
 
-    render() {  
+    render() {
         return (
-                /* /* <Header style= {{backgroundColor: '#34B089', height: 70, borderBottomColor: '#00ffff', }}>
-                    <Left style={{flexDirection: 'row'}}>
-                        <Button transparent >
-                            <Icon name= 'md-menu' style= {{color: 'white', marginLeft:15}}/>
-                        </Button>
-                        
-                    </Left> 
-                    <Right>
-                        <Icon name='md-cart' style= {{color: 'white'}}/>
-                    </Right>
-        </Header> */
-                
-                <View style={{flex: 1}}>
-                    <Header/>
-                    <TabNavigator>
-                        <TabNavigator.Item
-                            selected={this.state.selectedTab === 'home'}
-                            title="Home"
-                            onPress={() => this.setState({ selectedTab: 'home' })}
-                        >
-                            <Home/>
-                        </TabNavigator.Item>
-                        <TabNavigator.Item
-                            selected={this.state.selectedTab === 'contact'}
-                            title="Contact"
-                            onPress={() => this.setState({ selectedTab: 'contact' })}
-                        >
-                            <Contact/>
-                        </TabNavigator.Item>
+            /* /* <Header style= {{backgroundColor: '#34B089', height: 70, borderBottomColor: '#00ffff', }}>
+                <Left style={{flexDirection: 'row'}}>
+                    <Button transparent >
+                        <Icon name= 'md-menu' style= {{color: 'white', marginLeft:15}}/>
+                    </Button>
+                    
+                </Left> 
+                <Right>
+                    <Icon name='md-cart' style= {{color: 'white'}}/>
+                </Right>
+    </Header> */
 
-                        <TabNavigator.Item
-                            selected={this.state.selectedTab === 'search'}
-                            title="Search"
-                            onPress={() => this.setState({ selectedTab: 'search' })}
-                        >
-                            <Search/>
-                        </TabNavigator.Item>
+            <View style={{ flex: 1 }}>
+                <Header />
+                <TabNavigator>
+                    <TabNavigator.Item
+                        selected={this.state.selectedTab === 'home'}
+                        title="Home"
+                        onPress={() => this.setState({ selectedTab: 'home' })}
+                        renderIcon={() => <Image source={homeIcon} style={styles.iconStyle} />}
+                        renderSelectedIcon={() => <Image source={homeIconSelected} style={styles.iconStyle} />}
+                        selectedTitleStyle={{ color: '#34B089' }}
+                    >
+                        <Home />
+                    </TabNavigator.Item>
+                    <TabNavigator.Item
+                        selected={this.state.selectedTab === 'contact'}
+                        title="Contact"
+                        onPress={() => this.setState({ selectedTab: 'contact' })}
+                        renderIcon={() => <Image source={contactIcon} style={styles.iconStyle} />}
+                        renderSelectedIcon={() => <Image source={contactIconSelected} style={styles.iconStyle} />}
+                        selectedTitleStyle={{ color: '#34B089' }}
 
-                        <TabNavigator.Item
-                            selected={this.state.selectedTab === 'cart'}
-                            title="Cart"
-                            onPress={() => this.setState({ selectedTab: 'Cart' })}
-                        >
-                            <Cart/>
-                        </TabNavigator.Item>
+                    >
 
-                    </TabNavigator>
-                </View>
-           
+                        <Contact />
+                    </TabNavigator.Item>
+
+                    <TabNavigator.Item
+                        selected={this.state.selectedTab === 'search'}
+                        title="Search"
+                        onPress={() => this.setState({ selectedTab: 'search' })}
+                        renderIcon={() => <Image source={searchIcon} style={styles.iconStyle} />}
+                        renderSelectedIcon={() => <Image source={searchIconSelected} style={styles.iconStyle} />}
+                        selectedTitleStyle={{ color: '#34B089' }}
+                    >
+                        <Search />
+                    </TabNavigator.Item>
+
+                    <TabNavigator.Item
+                        selected={this.state.selectedTab === 'cart'}
+                        title="Cart"
+                        onPress={() => this.setState({ selectedTab: 'cart' })}
+                        renderIcon={() => <Image source={cartIcon} style={styles.iconStyle} />}
+                        renderSelectedIcon={() => <Image source={cartIconSelected} style={styles.iconStyle} />}
+                        selectedTitleStyle={{ color: '#34B089' }}
+                    >
+                        <Cart />
+                    </TabNavigator.Item>
+
+                </TabNavigator>
+            </View>
+
         );
     }
 }
@@ -96,4 +119,8 @@ const styles = StyleSheet.create({
         color: '#333333',
         marginBottom: 5,
     },
+    iconStyle: {
+        height: 20,
+        width: 20,
+    }
 });
