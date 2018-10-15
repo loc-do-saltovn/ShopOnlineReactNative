@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Dimensions,TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Dimensions,TouchableOpacity,  } from 'react-native';
 
 import { YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
@@ -10,8 +10,8 @@ import Home from './Home/Home'
 import Contact from './Contact/Contact'
 import Search from './Search/Search'
 import Cart from './Cart/Cart'
+import Header from './Header'
 
-import {Container, Content, Header, Left, Right, Icon} from 'native-base'
 const {height} = Dimensions.get('window')
 
 export default class Shop extends Component<Props> {
@@ -28,16 +28,20 @@ export default class Shop extends Component<Props> {
 
     render() {  
         return (
-            <Container>
-                <Header style= {{backgroundColor: '#3a455c', height: 70, borderBottomColor: '#00ffff', }}>
+                /* /* <Header style= {{backgroundColor: '#34B089', height: 70, borderBottomColor: '#00ffff', }}>
                     <Left style={{flexDirection: 'row'}}>
-                        <Icon name= 'md-menu' style= {{color: 'white', marginLeft:15}}/>
-                    </Left>
+                        <Button transparent >
+                            <Icon name= 'md-menu' style= {{color: 'white', marginLeft:15}}/>
+                        </Button>
+                        
+                    </Left> 
                     <Right>
                         <Icon name='md-cart' style= {{color: 'white'}}/>
                     </Right>
-                </Header>
+        </Header> */
+                
                 <View style={{flex: 1}}>
+                    <Header/>
                     <TabNavigator>
                         <TabNavigator.Item
                             selected={this.state.selectedTab === 'home'}
@@ -72,7 +76,6 @@ export default class Shop extends Component<Props> {
 
                     </TabNavigator>
                 </View>
-            </Container>
            
         );
     }
