@@ -7,34 +7,33 @@ import {
   Button,
 } from 'react-native';
 
+import Drawer from 'react-native-drawer'
+
+import Menu from './Menu'
+import Shop from './Shop/Shop.js'
+import Search from './Shop/Search/Search'
+import Authentication from '../Authentication/Authentication'
+import ChangeInfo from '../ChangeInfo/ChangeInfo/'
+import OrderHistory from '../OrderHistory/OrderHistory'
+
+import {createDrawerNavigator} from 'react-navigation'
+
 type Props = {};
 export default class Main extends Component<Props> {
+  
+  
   render() {
-    const {navigate} = this.props.navigation; // sử dụng navigation để liên kết với màn hình khác thông qua title của màn 
-    
-
     return (
-      <View>
-        <Text>Main Component</Text>
-        <Button 
-            title = 'Go To Authentication' 
-            onPress={()=>navigate('Authentication')}
-        />
-        
-        <Button 
-            title = 'Go To ChangeInfo' 
-            onPress={()=>navigate('ChangeInfo')}
-        />
-
-        <Button 
-            title = 'Go To OrderHistory' 
-            onPress={()=>navigate('OrderHistory')}
-        />
-          
-      </View> 
+      <MyApp></MyApp>
     );
   }
 }
+const MyApp = createDrawerNavigator({
+  Shop: Shop,
+  Authentication: Authentication,
+  ChangeInfo: ChangeInfo,  
+  OrderHistory: OrderHistory,
+})
 
 const styles = StyleSheet.create({
   container: {

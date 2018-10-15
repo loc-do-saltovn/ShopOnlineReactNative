@@ -14,9 +14,9 @@ export default class Authentication extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text>Authentication Component </Text>
-        <Button 
-            title = 'Go back to Main' 
-            onPress={()=>navigate('Main')}
+        <Button
+          onPress={() => this.props.navigation.goBack()}
+          title="Go back Main"
         />
       </View>
 

@@ -15,8 +15,8 @@ export default class ChangeInfo extends Component<Props> {
       <View style={styles.container}>
         <Text>ChangeInfo Component </Text>
         <Button 
-            title = 'Go back to Main' 
-            onPress={()=>navigate('Main')}
+            onPress={() => this.props.navigation.goBack()}
+            title="Go back Main"
         />
       </View>
     );
