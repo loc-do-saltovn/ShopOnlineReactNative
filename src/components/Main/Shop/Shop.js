@@ -58,7 +58,7 @@ export default class Shop extends Component<Props> {
                         onPress={() => this.setState({ selectedTab: 'home' })}
                         renderIcon={() => <Image source={homeIcon} style={styles.iconStyle} />}
                         renderSelectedIcon={() => <Image source={homeIconSelected} style={styles.iconStyle} />}
-                        selectedTitleStyle={{ color: '#34B089' }}
+                        selectedTitleStyle={{ color: '#4895F0' }}
                     >
                         <Home />
                     </TabNavigator.Item>
@@ -68,7 +68,7 @@ export default class Shop extends Component<Props> {
                         onPress={() => this.setState({ selectedTab: 'contact' })}
                         renderIcon={() => <Image source={contactIcon} style={styles.iconStyle} />}
                         renderSelectedIcon={() => <Image source={contactIconSelected} style={styles.iconStyle} />}
-                        selectedTitleStyle={{ color: '#34B089' }}
+                        selectedTitleStyle={{ color: '#4895F0' }}
 
                     >
 
@@ -81,7 +81,7 @@ export default class Shop extends Component<Props> {
                         onPress={() => this.setState({ selectedTab: 'search' })}
                         renderIcon={() => <Image source={searchIcon} style={styles.iconStyle} />}
                         renderSelectedIcon={() => <Image source={searchIconSelected} style={styles.iconStyle} />}
-                        selectedTitleStyle={{ color: '#34B089' }}
+                        selectedTitleStyle={{ color: '#4895F0' }}
                     >
                         <Search />
                     </TabNavigator.Item>
@@ -92,7 +92,7 @@ export default class Shop extends Component<Props> {
                         onPress={() => this.setState({ selectedTab: 'cart' })}
                         renderIcon={() => <Image source={cartIcon} style={styles.iconStyle} />}
                         renderSelectedIcon={() => <Image source={cartIconSelected} style={styles.iconStyle} />}
-                        selectedTitleStyle={{ color: '#34B089' }}
+                        selectedTitleStyle={{ color: '#4895F0' }}
                     >
                         <Cart />
                     </TabNavigator.Item>

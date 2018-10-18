@@ -8,7 +8,7 @@ const {height} = Dimensions.get('window')
 export default class Header extends Component<Props>{
     render() {
         return (
-            <View style = {{height: height / 8, backgroundColor: '#34B089', padding: 10, justifyContent:'space-around'}}>
+            <View style = {{height: height / 8, backgroundColor: '#4895F0', padding: 10, justifyContent:'space-around'}}>
                 <View style={{ flexDirection: 'row', }}>
                     <TouchableOpacity>
                         <Image source={icMenu} style={styles.iconStyle}/>

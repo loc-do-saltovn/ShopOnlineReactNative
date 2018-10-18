@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet,} from 'react-native';
 
-import {Icon,Button,Container,Header,Content,Left,} from 'native-base'
+import Popular from './Popular'
+import Category from './Category'
 export default class Home extends Component<Props>{
     render() {
         return (
-            <View style = {styles.container}>
-                <Text>Home</Text>
+            <View >
+                <Popular/>
+                <Category/>
             </View>
         );
     }
@@ -14,10 +16,10 @@ export default class Home extends Component<Props>{
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 1, 
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        backgroundColor: '#808080',
     },
     welcome: {
       fontSize: 20,
