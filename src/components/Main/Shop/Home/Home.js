@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet,} from 'react-native';
+import { View, Text, StyleSheet,ScrollView} from 'react-native';
 
 import Popular from './Popular'
 import Category from './Category'
+import TopProduct from './TopProduct'
 export default class Home extends Component<Props>{
     render() {
         return (
-            <View >
-                <Popular/>
-                <Category/>
-            </View>
+            <ScrollView >
+                {/* <Popular/>
+                <Category/> */}
+                <TopProduct/>
+            </ScrollView>
         );
     }
 }
