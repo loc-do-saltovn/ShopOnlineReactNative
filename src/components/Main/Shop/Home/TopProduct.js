@@ -21,7 +21,7 @@ export default class TopProduct extends Component {
                 </View>
                 <View style={bodyImage}>
                     <View style={productContainer}>
-                        <ElevatedView elevation={1} style={styles.stayElevated}>
+                        <ElevatedView elevation={3} style={styles.stayElevated}>
                             <ImageBackground source={productOne} style={productImage} />
                             <Text style={productName}>Product Name</Text>
                             <Text style={productPrice}>300$</Text>
@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
         fontWeight: '500',
     },
     stayElevated: {
-        backgroundColor: '#FFF'
+        backgroundColor: '#FFF',
+       
     }
 });

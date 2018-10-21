@@ -8,8 +8,8 @@ export default class Home extends Component<Props>{
     render() {
         return (
             <ScrollView >
-                {/* <Popular/>
-                <Category/> */}
+                <Popular/>
+                <Category/>
                 <TopProduct/>
             </ScrollView>
         );
