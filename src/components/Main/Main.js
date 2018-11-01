@@ -27,9 +27,7 @@ export default class Main extends Component<Props> {
     this.drawer.open();
   };
   render() {
-    const{navigator} = this.props;
     return ( 
-      
       <Drawer
         ref={(ref) => { this.drawer = ref; }}
         content={<Menu  navigation={this.props.navigation}/>}
