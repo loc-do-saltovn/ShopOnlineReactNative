@@ -16,24 +16,32 @@ import Authentication from '../Authentication/Authentication'
 import ChangeInfo from '../ChangeInfo/ChangeInfo/'
 import OrderHistory from '../OrderHistory/OrderHistory'
 
-import {createDrawerNavigator} from 'react-navigation'
+import { createDrawerNavigator } from 'react-navigation'
 
 type Props = {};
 export default class Main extends Component<Props> {
-  
-  
+  closeControlPanel = () => {
+    this.drawer.close();
+  };
+  openControlPanel = () => {
+    this.drawer.open();
+  };
   render() {
-    return (
-      <MyApp></MyApp>
+    const{navigator} = this.props;
+    return ( 
+      
+      <Drawer
+        ref={(ref) => { this.drawer = ref; }}
+        content={<Menu  navigation={this.props.navigation}/>}
+        openDrawerOffset={0.4}
+        tapToClose
+      >
+        <Shop open={this.openControlPanel.bind(this)} />
+      </Drawer>
     );
   }
 }
-const MyApp = createDrawerNavigator({
-  Shop: Shop,
-  Authentication: Authentication,
-  ChangeInfo: ChangeInfo,  
-  OrderHistory: OrderHistory,
-})
+
 
 const styles = StyleSheet.create({
   container: {

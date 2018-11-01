@@ -10,7 +10,7 @@ export default class Header extends Component<Props>{
         return (
             <View style = {{height: height / 8, backgroundColor: '#4895F0', padding: 10, justifyContent:'space-around'}}>
                 <View style={{ flexDirection: 'row', }}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress = {this.props.onOpenMenu}>
                         <Image source={icMenu} style={styles.iconStyle}/>
                     </TouchableOpacity>
                     {/* <Text style={styles.titleStyle}>GearShop</Text> */}
@@ -18,7 +18,7 @@ export default class Header extends Component<Props>{
                 </View>
                 <TextInput
                     style= {styles.textInputStyle}
-                    placeholder='What do you want to buy?'
+                    placeholder='Search?'
                 />
                 
             </View>

@@ -50,7 +50,7 @@ export default class Shop extends Component<Props> {
     </Header> */
 
             <View style={{ flex: 1 }}>
-                <Header />
+                <Header onOpenMenu={this.openMenu.bind(this)} />
                 <TabNavigator>
                     <TabNavigator.Item
                         selected={this.state.selectedTab === 'home'}

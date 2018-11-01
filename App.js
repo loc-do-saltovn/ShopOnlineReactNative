@@ -10,8 +10,7 @@ import Authentication from './src/components/Authentication/Authentication'
 import ChangeInfo from './src/components/ChangeInfo/ChangeInfo'
 import Main from './src/components/Main/Main'
 import OrderHistory from './src/components/OrderHistory/OrderHistory'
-
-
+import Menu from './src/components/Main/Menu'
 
 import {createStackNavigator} from 'react-navigation'
 
@@ -20,6 +19,7 @@ const AppStackNavigator = createStackNavigator({
   Authentication: {screen: Authentication},
   ChangeInfo: {screen: ChangeInfo},
   OrderHistory: {screen: OrderHistory},
+  Menu: {screen: Menu},
 }, {
   // cấu hình mặc định cho tất cả các màn hình 
   headerMode: 'none',
@@ -27,17 +27,20 @@ const AppStackNavigator = createStackNavigator({
 }
 )
 
+
+
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <AppStackNavigator ref={nav => {this.navigator = nav;}}
+      <AppStackNavigator
 
       />
       
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
