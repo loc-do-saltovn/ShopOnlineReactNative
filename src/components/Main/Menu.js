@@ -35,15 +35,6 @@ export default class Menu extends Component<Props>{
         const checkLoginOrLogout = this.state.isLogedIn ? loginJSX: logOutJSX;
         return (
             <View style={container}>
-                {/* <TouchableOpacity onPress={()=>navigate('Authentication')}>
-                    <Text>Go to Authentication</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={()=>navigate('Authentication')}>
-                    <Text>Go to ChangeInfo</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={()=>navigate('Authentication')}>
-                    <Text>Go to </Text>
-                </TouchableOpacity> */}
                 <ImageBackground source={Profile} style={imageStyle} />
                 {checkLoginOrLogout}
             </View>

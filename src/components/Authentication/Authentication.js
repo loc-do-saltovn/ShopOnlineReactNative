@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import {
-  Platform,
   StyleSheet,
   Text,
   View,
-  Dimensions,
   TouchableOpacity,
   Image,
   TextInput
@@ -12,7 +10,6 @@ import {
 
 import iconBack from "../../media/appIcon/back_white.png";
 
-const { height } = Dimensions.get("window");
 type Props = {};
 export default class Authentication extends Component<Props> {
   constructor(props){

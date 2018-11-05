@@ -17,7 +17,7 @@ export default class Popular extends Component {
                             <View style={{flex: 1 ,justifyContent: 'center'}}>
                                 <Text style={styles.textStyle}>POPULAR PRODUCT</Text>
                             </View>
-                            <View style={{flex: 4,}}>
+                            <View style={{flex: 4}}>
                                 <Image source ={bannerImage} style={styles.imageStyle}/>
                             </View>
                     </View>

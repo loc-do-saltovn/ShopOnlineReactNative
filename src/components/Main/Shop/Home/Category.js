@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, Dimensions, ImageBackground } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions, ImageBackground,TouchableOpacity } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
@@ -19,17 +19,22 @@ export default class Category extends Component {
                             <Text style={styles.textStyle}>POPULAR PRODUCT</Text>
                         </View>
                         <View style={{ flex: 4, }}>
-
                             <Swiper showsPagination width={imageWidth} height={imageHeight}>
-                                <ImageBackground source={maxiIcon} style={styles.imageStyle}>
-                                    <Text style={styles.cateTitle}>Maxi Dress</Text>
-                                </ImageBackground>
-                                <ImageBackground source={littleIcon} style={styles.imageStyle}>
-                                    <Text style={styles.cateTitle}>Maxi Dress</Text>
-                                </ImageBackground>
-                                <ImageBackground source={partyIcon} style={styles.imageStyle}>
-                                    <Text style={styles.cateTitle}>Maxi Dress</Text>
-                                </ImageBackground>
+                                <TouchableOpacity onPress={()=> this.props.navigation.navigate('ProductDetail')}>
+                                    <ImageBackground source={maxiIcon} style={styles.imageStyle}>
+                                        <Text style={styles.cateTitle}>Maxi Dress</Text>
+                                    </ImageBackground>
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={()=> this.props.navigation.navigate('ProductDetail')}>
+                                    <ImageBackground source={littleIcon} style={styles.imageStyle}>
+                                        <Text style={styles.cateTitle}>Maxi Dress</Text>
+                                    </ImageBackground>
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={()=> this.props.navigation.navigate('ProductDetail')}>
+                                    <ImageBackground source={partyIcon} style={styles.imageStyle}>
+                                        <Text style={styles.cateTitle}>Maxi Dress</Text>
+                                    </ImageBackground>
+                                </TouchableOpacity>
                             </Swiper>
 
                         </View>
