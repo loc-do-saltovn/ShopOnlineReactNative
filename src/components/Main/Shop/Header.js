@@ -14,7 +14,7 @@ export default class Header extends Component<Props>{
                         <Image source={icMenu} style={styles.iconStyle}/>
                     </TouchableOpacity>
                     {/* <Text style={styles.titleStyle}>GearShop</Text> */}
-                    <Image source={icLogo} style={styles.iconStyle1}/>
+                    {/* <Image source={icLogo} style={styles.iconStyle1}/> */}
                 </View>
                 <TextInput
                     style= {styles.textInputStyle}

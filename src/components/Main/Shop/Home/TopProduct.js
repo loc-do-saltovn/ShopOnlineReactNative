@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, ImageBackground, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, ImageBackground, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
 
 import productOne from '../../../../media/temp/sp1.jpeg'
@@ -20,36 +20,36 @@ export default class TopProduct extends Component {
                     <Text>TOP PRODUCT</Text>
                 </View>
                 <View style={bodyImage}>
-                    <View style={productContainer}>
+                    <TouchableOpacity style={productContainer} onPress={()=> this.props.navigation.navigate('ProductDetail')}>
                         <ElevatedView elevation={3} style={styles.stayElevated}>
                             <ImageBackground source={productOne} style={productImage} />
                             <Text style={productName}>Product Name</Text>
                             <Text style={productPrice}>300$</Text>
                         </ElevatedView>
-                    </View>
-                    <View style={productContainer}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={productContainer} onPress={()=> this.props.navigation.navigate('ProductDetail')}>
                         <ElevatedView elevation={3} style={styles.stayElevated}>
                             <ImageBackground source={productTwo} style={productImage} />
                             <Text style={productName}>Product Name</Text>
                             <Text style={productPrice}>300$</Text>
                         </ElevatedView>
-                    </View>
+                    </TouchableOpacity>
                     <View style={{ height: 10, width }} />
-                    <View style={productContainer}>
+                    <TouchableOpacity style={productContainer} onPress={()=> this.props.navigation.navigate('ProductDetail')}>
                         <ElevatedView elevation={3} style={styles.stayElevated}>
                             <ImageBackground source={productThree} style={productImage} />
                             <Text style={productName}>Product Name</Text>
                             <Text style={productPrice}>300$</Text>
                         </ElevatedView>
                         
-                    </View>
-                    <View style={productContainer}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={productContainer} onPress={()=> this.props.navigation.navigate('ProductDetail')}>
                         <ElevatedView elevation={3} style={styles.stayElevated}>
                             <ImageBackground source={productFour} style={productImage} />
                             <Text style={productName}>Product Name</Text>
                             <Text style={productPrice}>300$</Text>
                         </ElevatedView>
-                    </View>
+                    </TouchableOpacity>
                 </View>
             </View>
         )

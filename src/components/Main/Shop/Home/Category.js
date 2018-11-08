@@ -20,17 +20,17 @@ export default class Category extends Component {
                         </View>
                         <View style={{flex:4}}>
                             <Swiper showsPagination width={imageWidth} height={imageHeight}>
-                                <TouchableOpacity onPress={()=> this.props.navigation.navigate('ProductDetail')}>
+                                <TouchableOpacity onPress={()=> this.props.navigation.navigate('ListProduct')}>
                                     <ImageBackground source={maxiIcon} style={styles.imageStyle}>
                                         <Text style={styles.cateTitle}>Maxi Dress</Text>
                                     </ImageBackground>
                                 </TouchableOpacity>
-                                <TouchableOpacity onPress={()=> this.props.navigation.navigate('ProductDetail')}>
+                                <TouchableOpacity onPress={()=> this.props.navigation.navigate('ListProduct')}>
                                     <ImageBackground source={littleIcon} style={styles.imageStyle}>
                                         <Text style={styles.cateTitle}>Maxi Dress</Text>
                                     </ImageBackground>
                                 </TouchableOpacity>
-                                <TouchableOpacity onPress={()=> this.props.navigation.navigate('ProductDetail')}>
+                                <TouchableOpacity onPress={()=> this.props.navigation.navigate('ListProduct')}>
                                     <ImageBackground source={partyIcon} style={styles.imageStyle}>
                                         <Text style={styles.cateTitle}>Maxi Dress</Text>
                                     </ImageBackground>
@@ -68,7 +68,6 @@ const styles = StyleSheet.create({
     },
     cateTitle: {
         fontSize: 15,
-        fontFamily: 'Avenir',
         color: '#9A9A9A'
     }
 });

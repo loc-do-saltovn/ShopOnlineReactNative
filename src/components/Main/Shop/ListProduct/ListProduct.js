@@ -4,7 +4,7 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
+  TouchableOpacity,
 } from 'react-native';
 
 type Props = {};
@@ -13,6 +13,12 @@ export default class ListProduct extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text>ListProduct Component </Text>
+        <TouchableOpacity onPress={()=> this.props.navigation.goBack()}>
+          <Text>Go back Category</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={()=>this.props.navigation.navigate('ProductDetail')}>
+          <Text>Go to ProductDetail</Text>
+        </TouchableOpacity>
       </View>
     );
   }
