@@ -18,7 +18,7 @@ export default class Category extends Component {
                         <View style={{ flex: 1, justifyContent: 'center' }}>
                             <Text style={styles.textStyle}>POPULAR PRODUCT</Text>
                         </View>
-                        <View style={{ flex: 4, }}>
+                        <View style={{flex:4}}>
                             <Swiper showsPagination width={imageWidth} height={imageHeight}>
                                 <TouchableOpacity onPress={()=> this.props.navigation.navigate('ProductDetail')}>
                                     <ImageBackground source={maxiIcon} style={styles.imageStyle}>
@@ -36,7 +36,6 @@ export default class Category extends Component {
                                     </ImageBackground>
                                 </TouchableOpacity>
                             </Swiper>
-
                         </View>
                     </View>
                 </Elevated>

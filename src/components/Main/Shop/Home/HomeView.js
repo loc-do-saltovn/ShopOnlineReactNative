@@ -9,7 +9,7 @@ export default class HomeView extends Component<Props>{
         return (
             <ScrollView >
                 <Popular/>
-                <Category/>
+                <Category navigation={this.props.navigation}/>
                 <TopProduct/>
             </ScrollView>
         );

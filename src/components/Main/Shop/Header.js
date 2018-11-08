@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet,TouchableOpacity,Image,TextInput,Dimensions,} from 'react-native';
+import { View, StyleSheet,TouchableOpacity,Image,TextInput,Dimensions,} from 'react-native';
 
 import icLogo from '../../../media/appIcon/logo.png';
 import icMenu from '../../../media/appIcon/ic_menu.png'

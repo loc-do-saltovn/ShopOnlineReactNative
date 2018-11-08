@@ -21,8 +21,6 @@ import contactIconSelected from '../../../media/appIcon/contact.png'
 import searchIcon from '../../../media/appIcon/search0.png'
 import searchIconSelected from '../../../media/appIcon/search.png'
 
-const { height } = Dimensions.get('window')
-
 export default class Shop extends Component<Props> {
     constructor(props) {
         super(props)
@@ -37,18 +35,6 @@ export default class Shop extends Component<Props> {
 
     render() {
         return (
-            /* /* <Header style= {{backgroundColor: '#34B089', height: 70, borderBottomColor: '#00ffff', }}>
-                <Left style={{flexDirection: 'row'}}>
-                    <Button transparent >
-                        <Icon name= 'md-menu' style= {{color: 'white', marginLeft:15}}/>
-                    </Button>
-                    
-                </Left> 
-                <Right>
-                    <Icon name='md-cart' style= {{color: 'white'}}/>
-                </Right>
-    </Header> */
-
             <View style={{ flex: 1 }}>
                 <Header onOpenMenu={this.openMenu.bind(this)} />
                 <TabNavigator>
