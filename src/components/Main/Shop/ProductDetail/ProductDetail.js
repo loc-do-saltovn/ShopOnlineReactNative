@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
 } from 'react-native';
 
-type Props = {};
-export default class ProductDetail extends Component<Props> {
-  render() {
+export default class ProductDetail extends Component {
+  render() { 
     return (
-      <View style={styles.container}>
+      <View style={styles.container} >
         <Text>ProductDetail Component </Text>
         <TouchableOpacity onPress={()=> this.props.navigation.goBack()}>
           <Text>Go back TopProduct</Text>

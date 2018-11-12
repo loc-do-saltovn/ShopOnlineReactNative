@@ -51,10 +51,7 @@ const styles = StyleSheet.create({
         paddingBottom: 0,
     },
     stayElavated: {
-        
         backgroundColor: '#FFF',
-       
-
     },
     
 });

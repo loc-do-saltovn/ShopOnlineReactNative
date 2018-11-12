@@ -41,7 +41,6 @@ export default class TopProduct extends Component {
                             <Text style={productName}>Product Name</Text>
                             <Text style={productPrice}>300$</Text>
                         </ElevatedView>
-                        
                     </TouchableOpacity>
                     <TouchableOpacity style={productContainer} onPress={()=> this.props.navigation.navigate('ProductDetail')}>
                         <ElevatedView elevation={3} style={styles.stayElevated}>

@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet,} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-export default class Cart extends Component<Props>{
+export default class Cart extends Component{
 render() {
     return (
         <View style = {styles.container} >
             <Text>Component Cart</Text>
+            <TouchableOpacity onPress={()=>this.props.navigation.navigate('ProductDetail')}> 
+                <Text>Go to Product Detail</Text>
+            </TouchableOpacity>
         </View>
     );
 }

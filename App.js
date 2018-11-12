@@ -27,10 +27,7 @@ const AppStackNavigator = createStackNavigator({
 }
 )
 
-
-
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component{
   render() {
     return (
       <AppStackNavigator

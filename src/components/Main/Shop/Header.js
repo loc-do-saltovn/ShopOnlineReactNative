@@ -19,6 +19,7 @@ export default class Header extends Component<Props>{
                 <TextInput
                     style= {styles.textInputStyle}
                     placeholder='Search?'
+                    underlineColorAndroid="transparent"
                 />
                 
             </View>
@@ -62,5 +63,6 @@ const styles = StyleSheet.create({
         height: height /18, 
         backgroundColor: '#FFF',
         paddingLeft: 10,
+        paddingVertical: 0,
     }
   });

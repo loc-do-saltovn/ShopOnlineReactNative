@@ -4,6 +4,7 @@ import HomeView from './HomeView'
 import ListProduct from '../ListProduct/ListProduct'
 import ProductDetail from '../ProductDetail/ProductDetail'
 import Category from './Category'
+import Cart from '../Cart/Cart'
 
 import {createStackNavigator} from 'react-navigation'
 
@@ -12,6 +13,7 @@ const HomeStackNavigator = createStackNavigator({
     ListProduct: {screen: ListProduct},
     ProductDetail: {screen: ProductDetail},
     Category: {screen: Category},
+    ProductDetail: {screen: ProductDetail},
 
 }, {
     headerMode: 'none',
