@@ -5,7 +5,7 @@ import Profile from '../../media/temp/profile.png'
 export default class Menu extends Component<Props>{
     constructor(props) {
         super(props)
-        this.state = {isLogedIn: false};
+        this.state = {isLogedIn: true};
     }
     render() {
         const { container, imageStyle, btnSignInStyle, textSignInStyle,loginStyle,textUserNameStyle } = styles;

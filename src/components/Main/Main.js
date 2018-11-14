@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Drawer from 'react-native-drawer'
 import Menu from './Menu'
 import Shop from './Shop/Shop.js'
+import OrderHistory from '../OrderHistory/OrderHistory'
 
 type Props = {};
 export default class Main extends Component<Props> {
