@@ -9,8 +9,8 @@ import TabNavigator from 'react-native-tab-navigator'
 import Home from './Home/Home'
 import Contact from './Contact/Contact'
 import Search from './Search/Search'
-import Cart from './Cart/Cart'
 import Header from './Header'
+import CartView from './Cart/CartView'
 
 import homeIcon from '../../../media/appIcon/home0.png'
 import homeIconSelected from '../../../media/appIcon/home.png'
@@ -21,7 +21,7 @@ import contactIconSelected from '../../../media/appIcon/contact.png'
 import searchIcon from '../../../media/appIcon/search0.png'
 import searchIconSelected from '../../../media/appIcon/search.png'
 
-export default class Shop extends Component<Props> {
+export default class Shop extends Component{
     constructor(props) {
         super(props)
         this.state = {
@@ -79,7 +79,7 @@ export default class Shop extends Component<Props> {
                         renderSelectedIcon={() => <Image source={cartIconSelected} style={styles.iconStyle} />}
                         selectedTitleStyle={{ color: '#4895F0' }}
                     >
-                        <Cart />
+                        <CartView />
                     </TabNavigator.Item>
 
                 </TabNavigator>

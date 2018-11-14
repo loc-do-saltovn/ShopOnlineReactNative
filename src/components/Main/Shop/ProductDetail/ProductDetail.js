@@ -11,7 +11,7 @@ export default class ProductDetail extends Component {
     return (
       <View style={styles.container} >
         <Text>ProductDetail Component </Text>
-        <TouchableOpacity onPress={()=> this.props.navigation.goBack()}>
+        <TouchableOpacity onPress={()=> this.props.navigation.navigate('Cart')}>
           <Text>Go back TopProduct</Text>
         </TouchableOpacity>
       </View>
