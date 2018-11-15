@@ -14,7 +14,7 @@ export default class ChangeInfo extends Component {
   render() {
     const {
       wrapper, header, headerTitle, backIconStyle, body,
-      signInContainer, signInTextStyle, textInput
+      signInContainer, signInText, textInput
     } = styles;
     const { name, address, phone } = this.state;
     return (
@@ -32,7 +32,7 @@ export default class ChangeInfo extends Component {
             placeholder="Enter your name"
             autoCapitalize="none"
             value={name}
-            onChangeText={(txtName) => this.setState({ name: txtName })}
+            onChangeText={txtName => this.setState({ ...this.state, txtName })}
           />
           <TextInput
             style={textInput}
@@ -49,7 +49,7 @@ export default class ChangeInfo extends Component {
             onChangeText={txtPhone =>this.setState({ ...this.state, txtPhone })}
           />
           <TouchableOpacity style={signInContainer}>
-            <Text style={signInTextStyle}>CHANGE YOUR INFOMATION</Text>
+            <Text style={signInText}>CHANGE YOUR INFOMATION</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
     alignItems: 'center', 
     justifyContent: 'space-between', 
     flexDirection: 'row', 
-    paddingHorizontal: 10 },// eslint-disable-line
+    paddingHorizontal: 10 
+  },
   headerTitle: { 
     fontFamily: 'Avenir',
     color: '#fff',
@@ -108,7 +109,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'stretch'
     },
-  signInStyle: {
+  signInText: {
     flex: 3,
     marginTop: 50
   }

@@ -4,7 +4,6 @@ import HomeView from './HomeView'
 import ListProduct from '../ListProduct/ListProduct'
 import ProductDetail from '../ProductDetail/ProductDetail'
 import Category from './Category'
-import Cart from '../Cart/Cart'
 
 import {createStackNavigator} from 'react-navigation'
 

@@ -1,34 +1,24 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
+
+import CartView from './CartView'
+import ProductDetail from '../ProductDetail/ProductDetail'
+
+import {createStackNavigator} from 'react-navigation'
+
+const HomeStackNavigator = createStackNavigator({
+   CartView: {screen: CartView},
+   ProductDetail:{ screen: ProductDetail },
+}, {
+    headerMode: 'none',
+    initialRouteName: 'CartView',
+})
 export default class Cart extends Component{
-render() {
-    return (
-        <View style = {styles.container} >
-            <Text>Component Cart</Text>
-            <TouchableOpacity onPress={()=>this.props.navigation.navigate('ProductDetail')}> 
-                <Text>Go to Product Detail</Text>
-            </TouchableOpacity>
-        </View>
-    );
-}
+    render() {
+        return (
+            <HomeStackNavigator  />
+        );
+    }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
-});
+

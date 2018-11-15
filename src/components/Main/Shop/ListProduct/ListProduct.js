@@ -15,8 +15,8 @@ import sp2 from '../../../../media/temp/sp2.jpeg'
 import sp3 from '../../../../media/temp/sp3.jpeg'
 import sp4 from '../../../../media/temp/sp4.jpeg'
 
-type Props = {};
-export default class ListProduct extends Component<Props> {
+
+export default class ListProduct extends Component{
   render() {
     const { container, wrapper, header, title, backStyle, productContainer, productInfo,
            productImage, lastRowInfo, txtName, txtPrice, txtMaterial, txtColor, txtShowDetail  } 
@@ -34,7 +34,7 @@ export default class ListProduct extends Component<Props> {
               <View style= {productContainer}>
                 <Image source={sp1} style={productImage}/>
                 <View style={productInfo}>
-                  <Text style={txtName}>Lace Sleeve Si</Text>
+                  <Text style={txtName}>Lace Sleeve Si</Text> 
                   <Text style={txtPrice}>117$</Text>
                   <Text style={txtMaterial}>Material sik</Text>
                   <View style={lastRowInfo}>

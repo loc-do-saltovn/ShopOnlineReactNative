@@ -10,7 +10,7 @@ import Home from './Home/Home'
 import Contact from './Contact/Contact'
 import Search from './Search/Search'
 import Header from './Header'
-import CartView from './Cart/CartView'
+import Cart from './Cart/Cart'
 
 import homeIcon from '../../../media/appIcon/home0.png'
 import homeIconSelected from '../../../media/appIcon/home.png'
@@ -79,7 +79,7 @@ export default class Shop extends Component{
                         renderSelectedIcon={() => <Image source={cartIconSelected} style={styles.iconStyle} />}
                         selectedTitleStyle={{ color: '#4895F0' }}
                     >
-                        <CartView />
+                        <Cart />
                     </TabNavigator.Item>
 
                 </TabNavigator>
